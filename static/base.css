@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 50px!important;
+}
+
+ul{
+    list-style-type: none;
+}
+
+div.container-int{
+    text-align: center;
+}
+
+div.jumbotron{
+    background-image: url("95.jpg");
+    background-size: contain;
+}
+
+#nohead{
+    margin-top: 150px;
+}
+#login{
+    margin-left: 500px;
+}
+
+ul.navbar-right{
+    margin-right: 0;
+}

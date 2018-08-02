@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{# 页面标题 #}
+{% block title %}
+    小鲍的博客
+{% endblock %}
+
+{% block hearder_extends %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block introduce %}
+    <h1>欢迎访问我的博客</h1>
+    <p>斯是陋室，惟吾德馨</p>
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">了解我</button>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">我的信息</h4>
+                </div>
+                <div class="modal-body">
+                    <p>QQ:524502256</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+{% endblock %}
+<div class="back">
+     {# 页面内容 #}
+    {% block content %}
+        <div class="backgroud">
+            <!-- 图表容器 DOM -->
+            <div id="container" style="width: 600px;height:400px;"></div>
+            <script>
+                // 图表配置
+                var options = {
+                    chart: {type: 'line'},
+                    title: {text: null},
+                    xAxis: {
+                        categories: {{ dates|safe }},
+                        tickmarkPlacement:'no',// x 轴分类
+                        title:{ text:'阅读量'}
+                    },
+                    yAxis: {
+                        title: {text: null},
+                        labels:{enabled: false},
+                        gridLineDashStyle:'Dash',
+                    },
+                    series: [{                              // 数据列
+                        name: '阅读量',                        // 数据列名
+                        data: {{ read_nums }}                   // 数据
+                    }],
+                    plotOptions: {
+                        line: {
+                            dataLabels: {
+                                enabled: true
+                            }
+                        }
+                    },
+                    legend:{enabled: false},
+                    credits:{enabled: false}
+                };
+                // 图表初始化函数
+                var chart = Highcharts.chart('container', options);
+            </script>
+            <div class="hot-data">
+                <!--今天24小时内的热门博客 -->
+                <h3>今天热门博客</h3>
+                <ul>
+                    {% for hot_data in today_hot_data %}
+                        <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
+                            ({{ hot_data.read_num }})</li>
+
+                    {% empty %}
+                        <li>今天没有热门博客</li>
+                    {% endfor %}
+                    </ul>
+            </div>
+            <div class="hot-data">
+                <h3>昨天热门博客</h3>
+                <ul>
+                    {% for hot_data in yesterday_hot_data %}
+                        <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
+                            ({{ hot_data.read_num }})</li>
+                    {% empty %}
+                        <li>昨天没有热门博客</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="hot-data">
+                <h3>七天热门博客</h3>
+                <ul>
+                    {% for hot_blog in hot_blogs_for_7_days %}
+                        <li> <a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}</a>
+                            ({{ hot_blog.read_num_sum }})</li>
+                    {% empty %}
+                        <li>七天没有热门博客</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+
+    {% endblock %}
+
+</div>
