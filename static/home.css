@@ -9,6 +9,22 @@ div#container {
 div.hot-data {
     text-align: center;
     margin-top: 2em;
+
 }
+
+div.well{
+    width: 500px;
+}
+
+#hot_blog
+{
+    width: 300px;
+}
+
+div.background_home{
+    background-image: url("/static/95.jpg");
+
+}
+
 
 

@@ -1,5 +1,6 @@
 {% extends 'base01.html' %}
 {% load staticfiles %}
+<link rel="stylesheet" href="/user/static/form.css">
 
 {% block title %}
     {{ page_title }}
@@ -11,7 +12,7 @@
 {% block content %}
     <div class="container" id="login">
         <div class="row">
-            <div class="col-xs-4 cols-xs-offset-4">
+            <div class="col-xs-4 col-xs-offset-4">
                 <div class="panel panel-default" id="nohead">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ form_title }}</h3>

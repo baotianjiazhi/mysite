@@ -13,9 +13,11 @@
 
 {% block nav_home_active %}active{% endblock %}
 
+
+
 {% block introduce %}
-    <h1>欢迎访问我的博客</h1>
-    <p>斯是陋室，惟吾德馨</p>
+    <h1 style="color: #000000">欢迎访问我的博客</h1>
+    <p style="color: #000000">斯是陋室，惟吾德馨</p>
     <!-- 按钮触发模态框 -->
     <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">了解我</button>
     <!-- 模态框（Modal） -->
@@ -36,16 +38,21 @@
         </div><!-- /.modal -->
     </div>
 {% endblock %}
-<div class="back">
+
      {# 页面内容 #}
-    {% block content %}
-        <div class="backgroud">
-            <!-- 图表容器 DOM -->
-            <div id="container" style="width: 600px;height:400px;"></div>
+{% block content %}
+    <a class="btn btn-primary pull-right" role="button" data-toggle="collapse" href="#collapse_blog_num" aria-expanded="false" aria-controls="collapseExample">
+        七天浏览量
+    </a>
+    <div class="collapse pull-right" id="collapse_blog_num">
+        <div class="well">
+        <!-- 图表容器 DOM -->
+            <div id="container" class="" style="width: 600px;height:400px;" ></div>
             <script>
                 // 图表配置
                 var options = {
-                    chart: {type: 'line'},
+                    chart: {type: 'line',
+                            backgroundColor: ''},
                     title: {text: null},
                     xAxis: {
                         categories: {{ dates|safe }},
@@ -55,7 +62,7 @@
                     yAxis: {
                         title: {text: null},
                         labels:{enabled: false},
-                        gridLineDashStyle:'Dash',
+                        gridLineDashStyle:'solid',
                     },
                     series: [{                              // 数据列
                         name: '阅读量',                        // 数据列名
@@ -74,44 +81,53 @@
                 // 图表初始化函数
                 var chart = Highcharts.chart('container', options);
             </script>
-            <div class="hot-data">
-                <!--今天24小时内的热门博客 -->
-                <h3>今天热门博客</h3>
-                <ul>
-                    {% for hot_data in today_hot_data %}
-                        <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
-                            ({{ hot_data.read_num }})</li>
-
-                    {% empty %}
-                        <li>今天没有热门博客</li>
-                    {% endfor %}
-                    </ul>
-            </div>
-            <div class="hot-data">
-                <h3>昨天热门博客</h3>
-                <ul>
-                    {% for hot_data in yesterday_hot_data %}
-                        <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
-                            ({{ hot_data.read_num }})</li>
-                    {% empty %}
-                        <li>昨天没有热门博客</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="hot-data">
-                <h3>七天热门博客</h3>
-                <ul>
-                    {% for hot_blog in hot_blogs_for_7_days %}
-                        <li> <a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}</a>
-                            ({{ hot_blog.read_num_sum }})</li>
-                    {% empty %}
-                        <li>七天没有热门博客</li>
-                    {% endfor %}
-                </ul>
-            </div>
         </div>
+    </div>
 
+     <div class="hot-blog col-md-3 col-sm-6">
+         <div class="panel panel-default" >
+             <div class="panel-heading">
+                 <span class="glyphicon glyphicon-fire"></span>热门博客</div>
+             <div class="panel-body">
+                 <div class="hot-data">
+                     <!--今天24小时内的热门博客 -->
+                     <h3>今天热门博客</h3>
+                     <ul>
+                         {% for hot_data in today_hot_data %}
+                             <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
+                                 ({{ hot_data.read_num }})</li>
+                         {% empty %}
+                             <li>今天没有热门博客</li>
+                         {% endfor %}
+                     </ul>
+                 </div>
+                 <div class="hot-data">
+                     <h3>昨天热门博客</h3>
+                     <ul>
+                         {% for hot_data in yesterday_hot_data %}
+                             <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
+                                 ({{ hot_data.read_num }})</li>
+                         {% empty %}
+                             <li>昨天没有热门博客</li>
+                         {% endfor %}
+                     </ul>
+                 </div>
+                 <div class="hot-data">
+                     <h3>七天热门博客</h3>
+                     <ul>
+                         {% for hot_blog in hot_blogs_for_7_days %}
+                             <li> <a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}</a>
+                                 ({{ hot_blog.read_num_sum }})</li>
+                         {% empty %}
+                             <li>七天没有热门博客</li>
+                         {% endfor %}
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
 
-    {% endblock %}
+    <div>
 
-</div>
+    </div>
+{% endblock %}
