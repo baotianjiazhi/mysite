@@ -1,6 +1,5 @@
 {% extends 'base01.html' %}
 {% load staticfiles %}
-<link rel="stylesheet" href="/user/static/form.css">
 
 {% block title %}
     {{ page_title }}
@@ -12,7 +11,7 @@
 {% block content %}
     <div class="container" id="login">
         <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
+            <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
                 <div class="panel panel-default" id="nohead">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ form_title }}</h3>
@@ -34,7 +33,7 @@
                         </div>
                         <div class=" pull-right">
                             <input type="submit" value="{{ submit_text }}" class="btn btn-primary" style="margin-top: 10px">
-                            <butto class="btn btn-default" onclick="window.location.href='{{ return_back_url }}'"style="margin-top: 10px">返回</butto>
+                            <button class="btn btn-default" onclick="window.location.href='{{ return_back_url }}'"style="margin-top: 10px">返回</button>
                         </div>
                         </form>
                     </div>
