@@ -15,7 +15,7 @@
 {% load staticfiles %}
 {% load comment_tags %}
 {% block hearder_extends %}
-    <link rel="stylesheet" href="{% static 'blog.css' %}">
+    <link rel="stylesheet" href="{% static 'baoblog/blog.css' %}">
 {% endblock %}
 
 {# 页面内容 #}
@@ -25,7 +25,9 @@
             <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
                 <div class="panel panel-default">
                     <div class="panel-heading">{% block blog_list_title %}
-                        博客列表
+                       <h3>
+                           <div class="glyphicon glyphicon-book">博客列表</div>
+                       </h3>
                     {% endblock %}</div>
                     <div class="panel-body">
                     {% for blog in blogs %}
@@ -95,7 +97,9 @@
             </div>
             <div class="hidden-xs col-sm-4 col-md-3 col-lg-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">博客分类</div>
+                    <div class="panel-heading">
+                        <div class="glyphicon glyphicon-pencil">博客分类</div>
+                    </div>
                     <div class="panel-body">
                         <ul class="blog-types">
                             {% for blog_type in blog_types %}
@@ -110,7 +114,9 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-heading">日期归档</div>
+                    <div class="panel-heading">
+                        <div class="glyphicon glyphicon-time">日期归档</div>
+                    </div>
                     <div class="panel-body">
                         <ul>
                             {% for blog_date, blog_count in blog_dates.items %}

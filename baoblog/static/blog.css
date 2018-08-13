@@ -24,7 +24,7 @@ ul.blog-info-description li{
     margin-right: 1.5em;
 }
 
-div.blog-content{
+div.blog-note{
     text-indent: 2em;
     word-break: break-all;
     border: 1px dashed #ccc;
@@ -93,4 +93,8 @@ div.like{
 
 div.like .active{
     color: #f22;
+}
+
+div.panel-body{
+   padding: 30px; 
 }

@@ -6,7 +6,9 @@
 {% endblock %}
  页面内容
 {% block blog_list_title %}
-    日期归档：{{blogs_with_dates}}
-    <a href="{% url 'blog_list' %}" >全部博客</a>
+    <h3>
+        <div class="glyphicon glyphicon-book">日期归档：{{blogs_with_dates}}</div>
+        <a href="{% url 'blog_list' %}" class="pull-right">more...</a>
+    </h3>
 {% endblock %}
 
