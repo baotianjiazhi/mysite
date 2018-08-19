@@ -14,136 +14,151 @@
 {% block content %}
     <div class="container" style="margin-top: 80px;">
         <div class="row">
-            <div class="col-xs-10 col-xs-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3>{{ blog.title }}</h3>
-                    <ul class="blog-info-description">
-                        <li>作者:{{ blog.author }}</li>
-                        <li>类型:<a href="{% url 'blogs_with_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a></li>
-                        <li>发表日期:{{ blog.created_time|date:"Y-m-d H:i:s" }}</li>
-                        <li>阅读({{ blog.get_read_num }})</li>
-                        <li>评论({% get_comment_count blog %})</li>
-                    </ul>
-                </div>
-                <div class="panel-body">
-                    <div>{{ blog.content|safe}}</div>
-                    <div class="blog-note" style="margin-top: 50px;"><h4>本博客借鉴于杨仕航老师的django2.0教程，以及杨老师博客的一些排版和样式，杨老师博客见下
-                    ,本文为作者原创，如果转载请告知。</h4>
-                        <a href="http://yshblog.com/" target="_blank"><button class="btn btn-danger dropdown-toggle pull-right">点这跳转</button></a>
+            <div class="col-xs-10 col-xs-pull-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>{{ blog.title }}</h3>
+                        <ul class="blog-info-description">
+                            <li>作者:{{ blog.author }}</li>
+                            <li>类型:<a href="{% url 'blogs_with_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a></li>
+                            <li>发表日期:{{ blog.created_time|date:"Y-m-d H:i:s" }}</li>
+                            <li>阅读({{ blog.get_read_num }})</li>
+                            <li>评论({% get_comment_count blog %})</li>
+                        </ul>
                     </div>
-                        <div class="like" onclick="likeChange(this, '{% get_content_type blog %}', {{ blog.pk }})" >
+                    <div class="panel-body">
+                        <div>{{ blog.content|safe }}</div>
+                        <div class="blog-note" style="margin-top: 50px;"><h4>
+                            本博客借鉴于杨仕航老师的django2.0教程，以及杨老师博客的一些排版和样式，杨老师博客见下
+                            ,本文为作者原创，如果转载请告知。</h4>
+                            <a href="http://yshblog.com/" target="_blank">
+                                <button class="btn btn-danger dropdown-toggle pull-right">点这跳转</button>
+                            </a>
+                        </div>
+                        <div class="like" onclick="likeChange(this, '{% get_content_type blog %}', {{ blog.pk }})">
                             <span class="glyphicon glyphicon-thumbs-up {% get_like_status blog %}"></span>
                             <span class="liked-num">{% get_like_count blog %}</span>
                             <span>喜欢</span>
                         </div>
+                    </div>
                 </div>
-            </div>
 
                 <div class="blog-more">
-                <p>上一篇:
-                    {% if previous_blog %}
-                        <a href="{% url 'blog_detail' previous_blog.pk %}">{{ previous_blog.title }}</a>
-                    {% else %}
-                        没有了！
-                    {% endif %}
-                </p>
-                <p>下一篇:
-                    {% if next_blog %}
-                        <a href="{% url 'blog_detail' next_blog.pk %}">{{ next_blog.title }}</a>
-                    {% else %}
-                        没有了！
-                    {% endif %}
-                </p>
+                    <p>上一篇:
+                        {% if previous_blog %}
+                            <a href="{% url 'blog_detail' previous_blog.pk %}">{{ previous_blog.title }}</a>
+                        {% else %}
+                            没有了！
+                        {% endif %}
+                    </p>
+                    <p>下一篇:
+                        {% if next_blog %}
+                            <a href="{% url 'blog_detail' next_blog.pk %}">{{ next_blog.title }}</a>
+                        {% else %}
+                            没有了！
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-2 ">
+                <div class="panel panel-danger" style="position: fixed">
+                    <div class="panel-heading">
+                        博客列表
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
-             <div class="col-xs-10 col-xs-offset-1">
-                 <div class="comment-area">
-                     <h3 class="comment-area-title">提交评论</h3>
-                     {% if  user.is_authenticated %}
-                         <form id="comment_form" action="{% url 'update_comment' %}" method="POST" style="overflow: hidden">
-                             <label> {{ user.get_nickname_or_username }},欢迎评论！！！</label>
-                             <div id="reply_content_container" style="display: none">
+            <div class="col-xs-10 col-xs-pull-1">
+                <div class="comment-area">
+                    <h3 class="comment-area-title">提交评论</h3>
+                    {% if  user.is_authenticated %}
+                        <form id="comment_form" action="{% url 'update_comment' %}" method="POST"
+                              style="overflow: hidden">
+                            <label> {{ user.get_nickname_or_username }},欢迎评论！！！</label>
+                            <div id="reply_content_container" style="display: none">
                                 <p id="reply-title">回复:</p>
-                                <div id="reply_content"> </div>
-                             </div>
-                             {% csrf_token %}
-                             {% get_comment_form blog as comment_form %}
-                             {% for field in comment_form  %}
-                                 {{ field }}
-                             {% endfor %}
-                             <span id="comment_error"  class="text-danger pull-left"  ></span>
-                             <input type="submit" value="评论" class="btn btn-primary pull-right" >
-                         </form>
-                     {% else %}
-                         您尚未登录：登陆之后方可评论
-                         <a class="btn btn-primary" href="{% url 'login' %}?from={{ request.get_full_path }}">登陆</a>
-                         <span> or </span>
-                         <a class="btn btn-danger" href="{% url 'register' %}?from={{ request.get_full_path }}">注册</a>
-                     {% endif %}
-                 </div>
-                 <div class="panel panel-default" id="comment_title">
-                     <div class="panel-heading">
-                         <div class="comment-area">
-                             <h3 class="comment-area-title ">评论列表</h3>
-                             <div id="comment_list"></div>
-                         </div>
-                     </div>
-                     {% get_comment_list blog as comments %}
-                     {% for comment in comments %}
-                         <div class="comment panel-body">
-                             <span>{{ comment.user.get_nickname_or_username }}</span>
-                             <span>({{ comment.comment_time|date:"Y-m-d H:i:s" }}):</span>
-                             <div id="comment_{{ comment.pk }}">
-                                 {{ comment.text|safe }}
-                             </div>
-                             <div class="like" onclick="likeChange(this, '{% get_content_type comment %}', {{ comment.pk }})" >
-                                 <span class="glyphicon glyphicon-thumbs-up {% get_like_status comment %}"></span>
-                                 <span class="liked-num">{% get_like_count comment %}</span>
+                                <div id="reply_content"></div>
                             </div>
-                             <a href="javascript:reply({{ comment.pk }})" class="btn btn-danger">回复</a>
-                             {% for reply in comment.root_comment.all %}
-                                 <div class="reply">
-                                     <span>{{ reply.user.get_nickname_or_username }}</span>
-                                     <span>({{ reply.comment_time|date:"Y-m-d H:i:s" }})</span>
-                                     <span>回复</span>
-                                     <span>{{ reply.reply_to.get_nickname_or_username }}:</span>
-                                     <div id="comment_{{ reply.pk }}"  >
-                                         {{ reply.text|safe }}
-                                     </div>
-                                     <div class="like" onclick="likeChange(this, '{% get_content_type reply %}', {{ reply.pk }})" >
-                                         <span class="glyphicon glyphicon-thumbs-up {% get_like_status reply %}"></span>
-                                         <span class="liked-num">{% get_like_count reply %}</span>
-                                     </div>
-                                     <a href="javascript:reply({{ reply.pk }})" class="btn btn-danger" >回复</a>
-                                 </div>
-                             {% endfor %}
-                         </div>
-                     {% empty %}
-                         <span id="no_comment" style="text-align: center"><h3>暂无评论</h3></span>
-                     {% endfor %}
-                 </div>
-             </div>
-         </div>
-    <!-- Modal -->
+                            {% csrf_token %}
+                            {% get_comment_form blog as comment_form %}
+                            {% for field in comment_form %}
+                                {{ field }}
+                            {% endfor %}
+                            <span id="comment_error" class="text-danger pull-left"></span>
+                            <input type="submit" value="评论" class="btn btn-primary pull-right">
+                        </form>
+                    {% else %}
+                        您尚未登录：登陆之后方可评论
+                        <a class="btn btn-primary" href="{% url 'login' %}?from={{ request.get_full_path }}">登陆</a>
+                        <span> or </span>
+                        <a class="btn btn-danger" href="{% url 'register' %}?from={{ request.get_full_path }}">注册</a>
+                    {% endif %}
+                </div>
+                <div class="panel panel-default" id="comment_title">
+                    <div class="panel-heading">
+                        <div class="comment-area">
+                            <h3 class="comment-area-title ">评论列表</h3>
+                            <div id="comment_list"></div>
+                        </div>
+                    </div>
+                    {% get_comment_list blog as comments %}
+                    {% for comment in comments %}
+                        <div class="comment panel-body">
+                            <span>{{ comment.user.get_nickname_or_username }}</span>
+                            <span>({{ comment.comment_time|date:"Y-m-d H:i:s" }}):</span>
+                            <div id="comment_{{ comment.pk }}">
+                                {{ comment.text|safe }}
+                            </div>
+                            <div class="like"
+                                 onclick="likeChange(this, '{% get_content_type comment %}', {{ comment.pk }})">
+                                <span class="glyphicon glyphicon-thumbs-up {% get_like_status comment %}"></span>
+                                <span class="liked-num">{% get_like_count comment %}</span>
+                            </div>
+                            <a href="javascript:reply({{ comment.pk }})" class="btn btn-danger">回复</a>
+                            {% for reply in comment.root_comment.all %}
+                                <div class="reply">
+                                    <span>{{ reply.user.get_nickname_or_username }}</span>
+                                    <span>({{ reply.comment_time|date:"Y-m-d H:i:s" }})</span>
+                                    <span>回复</span>
+                                    <span>{{ reply.reply_to.get_nickname_or_username }}:</span>
+                                    <div id="comment_{{ reply.pk }}">
+                                        {{ reply.text|safe }}
+                                    </div>
+                                    <div class="like"
+                                         onclick="likeChange(this, '{% get_content_type reply %}', {{ reply.pk }})">
+                                        <span class="glyphicon glyphicon-thumbs-up {% get_like_status reply %}"></span>
+                                        <span class="liked-num">{% get_like_count reply %}</span>
+                                    </div>
+                                    <a href="javascript:reply({{ reply.pk }})" class="btn btn-danger">回复</a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% empty %}
+                        <span id="no_comment" style="text-align: center"><h3>暂无评论</h3></span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
         <div class="modal fade" id="login_modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
-                    <form id="login_model_form" action="#" method="post" >
+                    <form id="login_model_form" action="#" method="post">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">登陆</h4>
                         </div>
                         <div class="modal-body">
                             {% csrf_token %}
-                            {% for field in login_modal_form  %}
+                            {% for field in login_modal_form %}
                                 <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                                 {{ field }}
                                 <p class="text-danger">{{ field.errors.as_text }}</p>
                             {% endfor %}
-                            <span  class="text-danger" id="login_medal_tip"></span>
+                            <span class="text-danger" id="login_medal_tip"></span>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-primary">登陆</button>
@@ -158,28 +173,32 @@
 {% endblock %}
 
 {% block script_extends %}
-       <script type="text/javascript">
-        String.prototype.format = function(){
+    <script type="text/javascript">
+        String.prototype.format = function () {
             var str = this;
             for (var i = 0; i < arguments.length; i++) {
                 var str = str.replace(new RegExp('\\{' + i + '\\}', 'g'), arguments[i])
-            };
+            }
+            ;
             return str;
         }
-        function reply(reply_comment_id){
+
+        function reply(reply_comment_id) {
             // 设置值
             $('#reply_comment_id').val(reply_comment_id);
             var html = $("#comment_" + reply_comment_id).html();
             $('#reply_content').html(html);
             $('#reply_content_container').show();
-            $('html').animate({scrollTop: $('#comment_form').offset().top - 60}, 300, function(){
+            $('html').animate({scrollTop: $('#comment_form').offset().top - 60}, 300, function () {
                 CKEDITOR.instances['id_text'].focus();
             });
         }
-        function numFormat(num){
+
+        function numFormat(num) {
             return ('00' + num).substr(-2);
         }
-        function timeFormat(timestamp){
+
+        function timeFormat(timestamp) {
             var datetime = new Date(timestamp * 1000);
             var year = datetime.getFullYear();
             var month = numFormat(datetime.getMonth() + 1);
@@ -189,10 +208,11 @@
             var second = numFormat(datetime.getSeconds());
             return year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
         }
-        $("#comment_form").submit(function(){
+
+        $("#comment_form").submit(function () {
             // 判断是否为空
             $("#comment_error").text('');
-            if(CKEDITOR.instances["id_text"].document.getBody().getText().trim()==''){
+            if (CKEDITOR.instances["id_text"].document.getBody().getText().trim() == '') {
                 $("#comment_error").text('评论内容不能为空');
                 return false;
             }
@@ -204,37 +224,37 @@
                 type: 'POST',
                 data: $(this).serialize(),
                 cache: false,
-                success: function(data){
+                success: function (data) {
                     console.log(data);
-                    if(data['status']=="SUCCESS"){
-                        if($('#reply_comment_id').val()=='0'){
+                    if (data['status'] == "SUCCESS") {
+                        if ($('#reply_comment_id').val() == '0') {
                             // 插入评论
                             var comment_html = '<div id="root_{0}" class="comment">' +
                                 '<span>{1}</span>' +
                                 '<span>({2})：</span>' +
                                 '<div id="comment_{0}">{3}</div>' +
                                 '<div class="like" onclick="likeChange(this, \'{4}\', {0})">' +
-                                    '<span class="glyphicon glyphicon-thumbs-up"></span> ' +
-                                    '<span class="liked-num">0</span>' +
+                                '<span class="glyphicon glyphicon-thumbs-up"></span> ' +
+                                '<span class="liked-num">0</span>' +
                                 '</div>' +
                                 '<a href="javascript:reply({0});">回复</a>' +
                                 '</div>';
                             comment_html = comment_html.format(data['pk'], data['username'], timeFormat(data['comment_time']), data['text'], data['content_type']);
                             $("#comment_list").prepend(comment_html);
-                        }else{
+                        } else {
                             // 插入回复
                             var reply_html = '<div class="reply">' +
-                                        '<span>{1}</span>' +
-                                        '<span>({2})</span>' +
-                                        '<span>回复</span>' +
-                                        '<span>{3}：</span>' +
-                                        '<div id="comment_{0}">{4}</div>' +
-                                        '<div class="like" onclick="likeChange(this, \'{5}\', {0})">' +
-                                            '<span class="glyphicon glyphicon-thumbs-up\"></span> ' +
-                                            '<span class="liked-num">0</span>' +
-                                        '</div>' +
-                                        '<a href="javascript:reply({0});">回复</a>' +
-                                    '</div>';
+                                '<span>{1}</span>' +
+                                '<span>({2})</span>' +
+                                '<span>回复</span>' +
+                                '<span>{3}：</span>' +
+                                '<div id="comment_{0}">{4}</div>' +
+                                '<div class="like" onclick="likeChange(this, \'{5}\', {0})">' +
+                                '<span class="glyphicon glyphicon-thumbs-up\"></span> ' +
+                                '<span class="liked-num">0</span>' +
+                                '</div>' +
+                                '<a href="javascript:reply({0});">回复</a>' +
+                                '</div>';
                             reply_html = reply_html.format(data['pk'], data['username'], timeFormat(data['comment_time']), data['reply_to'], data['text'], data['content_type']);
                             $("#root_" + data['root_pk']).append(reply_html);
                         }
@@ -245,18 +265,19 @@
                         $('#reply_comment_id').val('0');
                         $('#no_comment').remove();
                         $("#comment_error").text('评论成功');
-                    }else{
+                    } else {
                         // 显示错误信息
                         $("#comment_error").text(data['message']);
                     }
                 },
-                error: function(xhr){
+                error: function (xhr) {
                     console.log(xhr);
                 }
             });
             return false;
         });
-        function likeChange(obj, content_type, object_id){
+
+        function likeChange(obj, content_type, object_id) {
             var is_like = obj.getElementsByClassName('active').length == 0;
             $.ajax({
                 url: "{% url 'like_change' %}",
@@ -267,28 +288,28 @@
                     is_like: is_like
                 },
                 cache: false,
-                success: function(data){
+                success: function (data) {
                     console.log(data)
-                    if(data['status'] == 'SUCCESS'){
+                    if (data['status'] == 'SUCCESS') {
                         // 更新点赞状态
                         var element = $(obj.getElementsByClassName('glyphicon'));
-                        if(is_like){
+                        if (is_like) {
                             element.addClass('active');
-                        }else{
+                        } else {
                             element.removeClass('active');
                         }
                         // 更新点赞数量
                         var liked_num = $(obj.getElementsByClassName('liked-num'));
                         liked_num.text(data['liked_num']);
-                    }else{
-                        if(data['code']==400){
+                    } else {
+                        if (data['code'] == 400) {
                             $('#login_modal').modal('show');
-                        }else{
+                        } else {
                             alert(data['message']);
                         }
                     }
                 },
-                error: function(xhr){
+                error: function (xhr) {
                     console.log(xhr)
                 }
             });
