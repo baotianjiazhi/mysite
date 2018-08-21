@@ -14,7 +14,7 @@
 {% block content %}
     <div class="container" style="margin-top: 80px;">
         <div class="row">
-            <div class="col-xs-10 col-xs-pull-1">
+            <div class="col-md-10 col-xs-10 col-md-pull-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>{{ blog.title }}</h3>
@@ -60,7 +60,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xs-2 ">
+            <div class="col-md-2 hidden-xs">
                 <div class="panel panel-default" style="position: fixed">
                     <div class="panel-heading">
                         <h4>相关个人资料</h4>
@@ -78,7 +78,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-10 col-xs-pull-1">
+            <div class="col-md-10 col-xs-10 col-md-pull-1">
                 <div class="comment-area">
                     <h3 class="comment-area-title">提交评论</h3>
                     {% if  user.is_authenticated %}
