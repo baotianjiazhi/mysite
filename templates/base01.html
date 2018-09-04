@@ -42,6 +42,14 @@
                         博客
                     </a>
                 </li>
+
+                <li class="{% block nav_about_me_active %}{% endblock %}">
+                    <a href="{% url "about_me" %}">
+                        <span class="glyphicon glyphicon-user">
+                        </span>
+                        个人介绍
+                    </a>
+                </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if not user.is_authenticated %}
