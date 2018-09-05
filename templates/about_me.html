@@ -1,6 +1,10 @@
 {% extends 'base01.html' %}
 {% load staticfiles %}
 
+
+{% block title %}
+    我的简历
+{% endblock %}
 {% block nav_about_me_active %}active{% endblock %}
 {% block hearder_extends %}
     <link rel="stylesheet" href="{% static 'about_me.css' %}">
@@ -8,7 +12,7 @@
 
 
 {% block content %}
-    <div class="about_me_content">
+     <div class="about_me_content">
         Hello World!
     </div>
 {% endblock %}
