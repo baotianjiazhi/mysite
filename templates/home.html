@@ -39,134 +39,142 @@
     </div>
 {% endblock %}
 
-     {# 页面内容 #}
+{# 页面内容 #}
 {% block content %}
-<div class="content_item col-xs-12">
-    <div class="row ">
-        <div class="col-xs-5 col-xs-offset-1">
-        <div style="margin-bottom: 20px;">
-        <h2 class="glyphicon glyphicon-book">技术博客</h2>
-        </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-sm-push-1 col-xs-10 col-md-6">
-        <div class="home-block" style="min-height: 380px;">
-            <!--阅读排行榜-->
-            <div class="read-nav">
-                <div class="read-list">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="active"><a href="javascript:void(0);">课程表</a></li>
-                        <li><a href="javascript:void(0);">趋势图</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="read-content">
-                <div class="read-content-item">
-                    <div class="row">
-                        <div class="col-sm-8">
-                            123
-                        </div>
-                    </div>
-                </div>
-                <div class="read-content-item read-chart" style="display:none;">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div id="container">加载中</div>
-                            <p id="chart_text"></p>
-                        </div>
-                    </div>
+    <div class="content_item col-xs-12">
+        <div class="row ">
+            <div class="col-xs-5 col-xs-offset-1">
+                <div style="margin-bottom: 20px;">
+                    <h2 class="glyphicon glyphicon-book">技术博客</h2>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-sm-6 col-sm-push-1 col-xs-10 col-md-6">
+            <div class="home-block" style="min-height: 380px;">
+                <!--阅读排行榜-->
+                <div class="read-nav">
+                    <div class="read-list">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="javascript:void(0);">课程表</a></li>
+                            <li><a href="javascript:void(0);">趋势图</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="read-content">
+                    <div class="read-content-item">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                123
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-content-item read-chart" style="display:none;">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div id="container">加载中</div>
+                                <p id="chart_text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
-    <script type="text/javascript">
-        /*绑定切换排行榜页面*/
-        $(".read-list li").each(function(){
-            $(this).click(function(){
-                //设置active
-                var index = $(".read-list li").index($(this));
-                $(".read-list li").removeClass('active');
-                $(this).addClass('active');
+        <script type="text/javascript">
+            /*绑定切换排行榜页面*/
+            $(".read-list li").each(function () {
+                $(this).click(function () {
+                    //设置active
+                    var index = $(".read-list li").index($(this));
+                    $(".read-list li").removeClass('active');
+                    $(this).addClass('active');
 
-                //切换标签页
-                $(".read-content-item").hide();
-                $(".read-content-item:eq(" + index + ")").show();
+                    //切换标签页
+                    $(".read-content-item").hide();
+                    $(".read-content-item:eq(" + index + ")").show();
+                });
             });
-        });
-         $('#container').highcharts({
-                    chart: {type: 'line',
-                            backgroundColor: ''},
+            $('#container').highcharts({
+                chart: {
+                    type: 'line',
+                    backgroundColor: ''
+                },
+                title: {text: null},
+                xAxis: {
+                    categories: {{ dates|safe }},
+                    tickmarkPlacement: 'no',// x 轴分类
+                    title: {text: '阅读量'}
+                },
+                yAxis: {
                     title: {text: null},
-                    xAxis: {
-                        categories: {{ dates|safe }},
-                        tickmarkPlacement:'no',// x 轴分类
-                        title:{ text:'阅读量'}
-                    },
-                    yAxis: {
-                        title: {text: null},
-                        labels:{enabled: false},
-                        gridLineDashStyle:'solid',
-                    },
-                    series: [{                              // 数据列
-                        name: '阅读量',                        // 数据列名
-                        data: {{ read_nums }}                   // 数据
-                    }],
-                    plotOptions: {
-                        line: {
-                            dataLabels: {
-                                enabled: true
-                            }
+                    labels: {enabled: false},
+                    gridLineDashStyle: 'solid',
+                },
+                series: [{                              // 数据列
+                    name: '阅读量',                        // 数据列名
+                    data: {{ read_nums }}                   // 数据
+                }],
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: true
                         }
-                    },
-                    legend:{enabled: false},
-                    credits:{enabled: false}
-                })
-    </script>
+                    }
+                },
+                legend: {enabled: false},
+                credits: {enabled: false}
+            })
+        </script>
 
-    <div class="hot-blog col-md-3 col-sm-4 col-xs-8 col-xs-push-1 col-md-push-2">
-         <div class="panel panel-danger" >
-             <div class="panel-heading">
-                 <span class="glyphicon glyphicon-fire"></span>热门博客</div>
-             <div class="panel-body">
-                 <div class="hot-data">
-                     <!--今天24小时内的热门博客 -->
-                     <h3>今天热门博客</h3>
-                     <ul>
-                         {% for hot_data in today_hot_data %}
-                             <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
-                                 ({{ hot_data.read_num }})</li>
-                         {% empty %}
-                             <li>今天没有热门博客</li>
-                         {% endfor %}
-                     </ul>
-                 </div>
-                 <div class="hot-data">
-                     <h3>昨天热门博客</h3>
-                     <ul>
-                         {% for hot_data in yesterday_hot_data %}
-                             <li> <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{hot_data.content_object.title}} </a>
-                                 ({{ hot_data.read_num }})</li>
-                         {% empty %}
-                             <li>昨天没有热门博客</li>
-                         {% endfor %}
-                     </ul>
-                 </div>
-                 <div class="hot-data">
-                     <h3>七天热门博客</h3>
-                     <ul>
-                         {% for hot_blog in hot_blogs_for_7_days %}
-                             <li> <a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}</a>
-                                 ({{ hot_blog.read_num_sum }})</li>
-                         {% empty %}
-                             <li>七天没有热门博客</li>
-                         {% endfor %}
-                     </ul>
-                 </div>
-             </div>
-         </div>
-     </div>
+        <div class="hot-blog col-md-3 col-sm-4 col-xs-8 col-xs-push-1 col-md-push-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-fire"></span>热门博客
+                </div>
+                <div class="panel-body">
+                    <div class="hot-data">
+                        <!--今天24小时内的热门博客 -->
+                        <h3>今天热门博客</h3>
+                        <ul>
+                            {% for hot_data in today_hot_data %}
+                                <li>
+                                    <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{ hot_data.content_object.title }} </a>
+                                    ({{ hot_data.read_num }})
+                                </li>
+                            {% empty %}
+                                <li>今天没有热门博客</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="hot-data">
+                        <h3>昨天热门博客</h3>
+                        <ul>
+                            {% for hot_data in yesterday_hot_data %}
+                                <li>
+                                    <a href="{% url 'blog_detail' hot_data.content_object.pk %}">{{ hot_data.content_object.title }} </a>
+                                    ({{ hot_data.read_num }})
+                                </li>
+                            {% empty %}
+                                <li>昨天没有热门博客</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="hot-data">
+                        <h3>七天热门博客</h3>
+                        <ul>
+                            {% for hot_blog in hot_blogs_for_7_days %}
+                                <li><a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}</a>
+                                    ({{ hot_blog.read_num_sum }})
+                                </li>
+                            {% empty %}
+                                <li>七天没有热门博客</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
