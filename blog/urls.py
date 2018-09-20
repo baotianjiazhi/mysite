@@ -29,5 +29,7 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('about_me/', views.about_me, name='about_me')
 ]
-
+handler404 = views.page_not_found
+handler500 = views.page_error
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
