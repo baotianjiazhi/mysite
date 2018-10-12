@@ -5,3 +5,4 @@ root@account.jetbrains.com
 data.sql
 venv/
 mysqlclient-1.3.13-cp36-cp36m-win_amd64.whl
+static_collected/
