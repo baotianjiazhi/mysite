@@ -2,11 +2,414 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7308d083-cfa2-4cc3-a420-fd241f6bfc96" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/settings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/settings/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/settings/development.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/settings/production.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/BmpImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/BmpImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/DcxImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/DcxImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/EpsImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/EpsImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/FpxImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/FpxImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GbrImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GbrImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GdImageFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GdImageFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GimpGradientFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/GimpGradientFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcnsImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcnsImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageCms.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageCms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageColor.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageColor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw2.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFont.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFont.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImagePath.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImagePath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageQt.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageQt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageShow.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageShow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageStat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageStat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageTk.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageTk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageTransform.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageTransform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/Jpeg2KImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/Jpeg2KImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/JpegImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/JpegImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/MpoImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/MpoImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/MspImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/MspImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PSDraw.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PSDraw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PcxImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PcxImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PpmImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PpmImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PsdImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PsdImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PyAccess.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/PyAccess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SgiImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SgiImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SpiderImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SpiderImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SunImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/SunImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TgaImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TgaImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/WalImageFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/WalImageFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/WmfImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/WmfImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/XpmImagePlugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/XpmImagePlugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_binary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imaging.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imaging.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingcms.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingcms.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingft.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingft.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingmath.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingmath.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingmorph.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingmorph.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingtk.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_imagingtk.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_tkinter_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_tkinter_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_version.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_webp.cp36-win_amd64.pyd" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/_webp.cp36-win_amd64.pyd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/PIL/features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Pillow-5.2.0.dist-info/zip-safe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/CHANGES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/adapters/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/adapters/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/build-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/build-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/contents.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/contents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bs.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/bs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/de-ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/de-ch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-au.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-au.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-gb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en-gb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/eo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/es-mx.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/es-mx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fo.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fr-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fr-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/gu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/gu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ka.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ka.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ku.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/mn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/mn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/no.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/si.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sr-latn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sr-latn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/tt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/ug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/lang/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/clipboard/dialogs/paste.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/clipboard/dialogs/paste.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/dialog/dialogDefinition.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/dialog/dialogDefinition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/find/dialogs/find.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/find/dialogs/find.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/flash/dialogs/flash.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/flash/dialogs/flash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/button.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/checkbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/hiddenfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/select.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/textarea.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/textarea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/textfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/forms/dialogs/textfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/iframe/dialogs/iframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/iframe/dialogs/iframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/image/dialogs/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/image/dialogs/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/link/dialogs/anchor.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/link/dialogs/anchor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/liststyle/dialogs/liststyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/pastefromword/filter/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/pastefromword/filter/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/scayt/dialogs/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/scayt/dialogs/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/smiley/dialogs/smiley.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/smiley/dialogs/smiley.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/cy.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/eo.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ku.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/no.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/si.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/tt.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ug.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/table/dialogs/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/table/dialogs/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/templates/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/templates/templates/default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/wsc/dialogs/wsc.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/plugins/wsc/dialogs/wsc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_gecko.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/editor_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/skins/moono-lisa/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/static/ckeditor/ckeditor/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor/widgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/image/pillow_backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/image/pillow_backend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/ckeditor_uploader/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/js_asset/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/js_asset/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/js_asset/js.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/js_asset/js.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-18.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/basecommand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/baseparser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/build_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/build_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/cmdoptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/completion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/freeze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/hash.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/list.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/show.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/uninstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/compat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/locations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/locations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/models/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/models/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/freeze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/pep425tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/pep425tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_set.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/req_uninstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/resolve.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/resolve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/status_codes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/appdirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/filesystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/filesystem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/outdated.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/outdated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/packaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/packaging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/bazaar.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/bazaar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/git.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/git.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/mercurial.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/mercurial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/subversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/subversion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/cacert.pem" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/cacert.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/__about__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/__about__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/requirements.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/requirements.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/specifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/specifiers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pkg_resources/py31compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pkg_resources/py31compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pyparsing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pyparsing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pytoml/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pytoml/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/requests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/requests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.6.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.6.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +419,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/mysite$manage.coverage" NAME="manage Coverage Results" MODIFIED="1537449777880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mysite$manage.coverage" NAME="manage Coverage Results" MODIFIED="1539345298512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="blog" is-module-sdk="true">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -36,59 +439,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-870">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="270">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blog/settings.py">
+      <file leaf-file-name="development.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/settings/development.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="500.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/500.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/404.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
-                <element signature="e#628#660#0" expanded="true" />
+                <element signature="e#305#314#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/settings/production.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/error.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -98,9 +492,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -143,12 +537,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/blog/forms.py" />
-        <option value="$PROJECT_DIR$/comment/forms.py" />
-        <option value="G:/blog25/baoblog/models.py" />
-        <option value="G:/blog25/blog/settings.py" />
-        <option value="G:/python/bao/hardway/insert.py" />
         <option value="$PROJECT_DIR$/comment/templatetags/comment_tags.py" />
         <option value="$PROJECT_DIR$/read_statistics/models.py" />
         <option value="$PROJECT_DIR$/baoblog/static/blog.css" />
@@ -193,7 +581,13 @@
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/blog/urls.py" />
+        <option value="$PROJECT_DIR$/blog/settings/local.py" />
         <option value="$PROJECT_DIR$/blog/settings.py" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/blog/wsgi.py" />
+        <option value="$PROJECT_DIR$/blog/settings/base.py" />
+        <option value="$PROJECT_DIR$/blog/settings/development.py" />
+        <option value="$PROJECT_DIR$/blog/settings/production.py" />
       </list>
     </option>
   </component>
@@ -206,7 +600,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="640" />
     <option name="height" value="515" />
   </component>
@@ -218,7 +612,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,17 +627,13 @@
             <path>
               <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysite" type="462c0819:PsiDirectoryNode" />
-              <item name="comment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mysite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mysite" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,16 +656,17 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\博客相关\django\blog 主要\mysite\blog\settings" />
+      <recent name="G:\blog\user" />
+      <recent name="G:\blog\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\baobaobao123\Desktop\博客相关\django\blog 主要\mysite\static\about_me" />
       <recent name="C:\Users\baobaobao123\Desktop\博客相关\django\blog\mysite\static\picture" />
       <recent name="C:\Users\baobaobao123\Desktop\博客相关\django\blog\mysite\baoblog\static\baoblog" />
       <recent name="G:\blog\user\templates\user" />
       <recent name="G:\blog\user" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\blog\user" />
-      <recent name="G:\blog\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -425,26 +815,26 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5020107" side_tool="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402147" side_tool="true" weight="0.26533523" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798927" weight="0.26533523" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32905984" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49798927" weight="0.31241083" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23793566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49597856" visible="true" weight="0.26533523" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4966488" weight="0.31241083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2680965" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281027" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,44 +849,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://G:/python/bao/micheal liao/sina.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comment/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/error.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/user/bind_email.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/user/forgot_password.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/templates/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -580,9 +932,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/read_statistics/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -597,9 +947,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py" />
     <entry file="file://$PROJECT_DIR$/comment/templatetags/comment_tags.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -627,13 +975,6 @@
     <entry file="file://$PROJECT_DIR$/static/picture/images/patterns/soft_wallpaper.png" />
     <entry file="file://$PROJECT_DIR$/static/about_me/style.css" />
     <entry file="file://$PROJECT_DIR$/static/about_me/prettyPhoto.css" />
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/about_me.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -713,53 +1054,90 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-870">
+        <state relative-caret-position="180">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="1920">
           <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/500.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        <state relative-caret-position="1920">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="1260">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="720">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/settings.py" />
+    <entry file="file://$PROJECT_DIR$/blog/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/settings/development.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
-            <element signature="e#628#660#0" expanded="true" />
+            <element signature="e#305#314#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/settings.py">
+    <entry file="file://$PROJECT_DIR$/blog/settings/production.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="171">
+          <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
