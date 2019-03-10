@@ -20,3 +20,8 @@ blog<br/>
            主机记录：@
            记录值：本机域名
            
+<h2>使用说明</h2>
+<p>git clone或者下载zip后 创建虚拟环境</p>
+<p>在虚拟环境中pip install -r requirements.txt</p>
+<p>启动manage.py</p>
+<p>一些配置文件是我自己的，如果需要使用可以自行修改，还有一部分bug尚未完善，不过基本功能已经全部实现</>
