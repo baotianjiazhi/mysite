@@ -24,4 +24,5 @@ blog<br/>
 <p>git clone或者下载zip后 创建虚拟环境</p>
 <p>在虚拟环境中pip install -r requirements.txt</p>
 <p>启动manage.py</p>
+<p>本地网址:127.0.0.1:8000</p>
 <p>一些配置文件是我自己的，如果需要使用可以自行修改，还有一部分bug尚未完善，不过基本功能已经全部实现</>
